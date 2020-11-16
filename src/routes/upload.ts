@@ -1,7 +1,6 @@
 import { Router } from 'express';
-import { page } from '../controllers/Upload';
+import { page, uploadFile } from '../controllers/Upload';
 const uploadRouter: Router = Router();
-
 uploadRouter.get('/', page);
-
+uploadRouter.post('/', uploadFile);
 export default uploadRouter;
